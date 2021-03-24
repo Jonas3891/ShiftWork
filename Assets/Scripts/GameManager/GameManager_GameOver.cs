@@ -7,13 +7,13 @@ public class GameManager_GameOver : MonoBehaviour
     private GameManager gameManagerMaster;
     public GameObject panelGameOver;
 
-    private void OnEnable()
+    void OnEnable()
     {
         SetInitialReferences();
         gameManagerMaster.GameOverEvent += TurnOnGameOverPanel;
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
         gameManagerMaster.GameOverEvent -= TurnOnGameOverPanel;
     }

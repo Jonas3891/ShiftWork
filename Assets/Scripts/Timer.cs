@@ -5,15 +5,11 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    private GameManager gameManagerMaster;
     public bool timerIsRunning = false;
     public Text timeText;
 
     public float timeRemaining;
-    // Start is called before the first frame update
-    void Start()
-    {
-        // timerIsRunning = true;
-    }
 
     // Update is called once per frame
     void Update()
@@ -22,7 +18,7 @@ public class Timer : MonoBehaviour
         {
             if (timeRemaining > 0)
             {
-                if(!(timeRemaining > 10))
+                if (!(timeRemaining > 10))
                 {
                     timeText.color = Color.red;
                 }
@@ -30,12 +26,13 @@ public class Timer : MonoBehaviour
                 DisplayTime(timeRemaining);
                 Debug.Log(timeRemaining);
             }
-        }
-        else
-        {
-            Debug.Log("Time has run OUT");
-            timeRemaining = 0;
-            timerIsRunning = false;
+            else
+            {
+                Debug.Log("Time has run OUT");
+                timeRemaining = 100;
+                timerIsRunning = false;
+                GetComponent<GameManager>().CallEventGameOver();
+            }
         }
     }
 
@@ -48,4 +45,5 @@ public class Timer : MonoBehaviour
 
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
+
 }
