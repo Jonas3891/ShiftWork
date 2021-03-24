@@ -10,8 +10,14 @@ public class Menu : MonoBehaviour
         SceneManager.LoadScene(newGame);
     }
 
+    public void Loadmenu(string menu)
+    {
+        SceneManager.LoadScene(menu);
+    }
+
     public void ExitGameBtn()
     {
+        Debug.Log("EXIT GAME");
         Application.Quit();
     }
 }
