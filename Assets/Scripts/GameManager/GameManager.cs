@@ -5,52 +5,53 @@ public class GameManager : MonoBehaviour
 {
     public delegate void GameMangerEventHandler();
     public event GameMangerEventHandler MenuToggleEvent;
-    // public event GameMangerEventHandler InventoryUIToggleEvent;
+    public event GameMangerEventHandler InventoryUIToggleEvent;
     public event GameMangerEventHandler RestartLevelEvent;
     public event GameMangerEventHandler GoToMenuSceneEvent;
     public event GameMangerEventHandler GameOverEvent;
 
     public bool isGameOver;
-    // public bool isInventoryUIOn;
+    public bool isInventoryUIOn;
     public bool isMenuOn;
 
     public void CallEventMenuToggle()
     {
-        if(MenuToggleEvent != null)
+        if (MenuToggleEvent != null)
         {
             MenuToggleEvent();
         }
     }
 
-    //    public void CallEventInventoryUIToggle()
-    //    {
-    //        if (InventoryUIToggleEvent != null)
-    //        {
-    //             InventoryUIToggleEvent();
-    //    }
-
-    public void CallEventRestartLevel()
+    public void CallEventInventoryUIToggle()
     {
-        if (RestartLevelEvent != null)
+        if (InventoryUIToggleEvent != null)
         {
-            RestartLevelEvent();
+            InventoryUIToggleEvent();
         }
     }
 
-    public void CallEventGotToMenuScene()
-    {
-        if (GoToMenuSceneEvent != null)
+        public void CallEventRestartLevel()
         {
-            GoToMenuSceneEvent();
+            if (RestartLevelEvent != null)
+            {
+                RestartLevelEvent();
+            }
         }
-    }
 
-    public void CallEventGameOver()
-    {
-        if (GameOverEvent != null)
+        public void CallEventGotToMenuScene()
         {
-            isGameOver = true;
-            GameOverEvent();
+            if (GoToMenuSceneEvent != null)
+            {
+                GoToMenuSceneEvent();
+            }
         }
-    }
+
+        public void CallEventGameOver()
+        {
+            if (GameOverEvent != null)
+            {
+                isGameOver = true;
+                GameOverEvent();
+            }
+        }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gamemanager_Pause : MonoBehaviour
+public class GameManager_Pause : MonoBehaviour
 {
 
     private GameManager gameManagerMaster;
@@ -11,12 +11,12 @@ public class Gamemanager_Pause : MonoBehaviour
     private void OnEnable()
     {
         SetInitialReference();
-        gameManagerMaster.menuToggleEvent += TogglePause;
+        gameManagerMaster.MenuToggleEvent += TogglePause;
     }
 
     private void OnDisable()
     {
-        gameManagerMaster.menuToggleEvent -= TogglePause;
+        gameManagerMaster.MenuToggleEvent -= TogglePause;
     }
 
     void SetInitialReference()
