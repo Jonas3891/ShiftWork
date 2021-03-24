@@ -38,8 +38,10 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        public void CallEventGotToMenuScene()
+        public void CallEventGoToMenuScene()
         {
+        
+        Debug.Log("Calling Menu"); 
             if (GoToMenuSceneEvent != null)
             {
                 GoToMenuSceneEvent();
