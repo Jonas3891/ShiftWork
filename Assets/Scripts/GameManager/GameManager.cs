@@ -9,16 +9,26 @@ public class GameManager : MonoBehaviour
     public event GameMangerEventHandler RestartLevelEvent;
     public event GameMangerEventHandler GoToMenuSceneEvent;
     public event GameMangerEventHandler GameOverEvent;
+    public event GameMangerEventHandler TimerToggleEvent;
 
     public bool isGameOver;
     public bool isInventoryUIOn;
     public bool isMenuOn;
+    public bool isTimerOn;
 
     public void CallEventMenuToggle()
     {
         if (MenuToggleEvent != null)
         {
             MenuToggleEvent();
+        }
+    }
+
+    public void CallEventTimer()
+    {
+        if (TimerToggleEvent != null)
+        {
+            TimerToggleEvent();
         }
     }
 
