@@ -2,17 +2,25 @@
 
 Author: John Buckle
 
-====================================================================
+
+
+
+
+
 ====================		SHIFT WORK			====================
-====================================================================
 
 This repository contains the game Shift Work
 
 The goal of the game is to get through your first day at a new job before the time runs out.
 
-====================================================================
+
+
+
+
+
+
 ====================		Controls			====================
-====================================================================
+
 Controls
 
 wasd - movement
@@ -26,9 +34,12 @@ Enter key - Select dialogue
 Left mouse button - Interact with objects
 
 
-====================================================================
+
+
+
+
+
 ====================		Set Up		============================
-====================================================================
 
 Cloning the game should give you all the files required. 
 This Repository uses Gits LFS system so downloading the repository may cause errors
