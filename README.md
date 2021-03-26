@@ -1,29 +1,45 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Author: John Buckle
 
-### What is this repository for? ###
+============================================================================================================================================
+===============================================			SHIFT WORK			================================================================
+============================================================================================================================================
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+This repository contains the game Shift Work
 
-### How do I get set up? ###
+The goal of the game is to get through your first day at a new job before the time runs out.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+============================================================================================================================================
+===============================================			Controls			================================================================
+============================================================================================================================================
+Controls
 
-### Contribution guidelines ###
+wasd - movement
+e 	 - Speak with characters
+e 	 - Close dialogue
+I 	 - Inventory
 
-* Writing tests
-* Code review
-* Other guidelines
+Mouse wheel - Change dialogue options
+Enter key - Select dialogue 
 
-### Who do I talk to? ###
+Left mouse button - Interact with objects
 
-* Repo owner or admin
-* Other community or team contact
+
+============================================================================================================================================
+===============================================			SET UP			================================================================
+============================================================================================================================================
+
+Cloning the game should give you all the files required. 
+This Repository uses Gits LFS system so downloading the repository may cause errors
+To play the game select a scene and press the play button to play individual scenes
+The three scenes currently available are 
+	MainMenu - 
+		Title screen for the game. Here you can Select new game or exit.
+	Opening scene
+		This is a short opening cut scene. Will be expanded on in the future.
+	CityPartial
+		This is where the main gameplay occurs. 
+	
+The game can be played by loading the indiviudal scenes or building and running the game.
+When building and running the game makes sure that all three scenes are added to the build settings.
