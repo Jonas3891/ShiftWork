@@ -21,14 +21,16 @@ The goal of the game is to get through your first day at a new job before the ti
 
 ====================		Controls			====================
 
-Controls
-
 wasd - movement
+
 e 	 - Speak with characters
+
 e 	 - Close dialogue
+
 I 	 - Inventory
 
 Mouse wheel - Change dialogue options
+
 Enter key - Select dialogue 
 
 Left mouse button - Interact with objects
