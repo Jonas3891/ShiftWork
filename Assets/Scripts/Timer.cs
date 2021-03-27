@@ -24,7 +24,6 @@ public class Timer : MonoBehaviour
                 }
                 timeRemaining -= Time.deltaTime;
                 DisplayTime(timeRemaining);
-                Debug.Log(timeRemaining);
             }
             else
             {
