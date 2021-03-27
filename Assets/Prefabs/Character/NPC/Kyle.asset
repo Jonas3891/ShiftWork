@@ -14,8 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Kyle
   dialogue:
-  - I'm only here for testing
-  - Did this work
+  - 'Welcome to your first day on the job!
+
+    To speak with me scroll using your
+    mouse wheel. Press Enter to select'
+  - 'Today is your first day. Your job is to finish each job before the day is over. '
+  - You will get a new job on each floor of this office. To move to the next you
+    need to finish your job before the time is up.
+  - On this floor you need to find the elevator to make your way to your first office.
+    Use the lights to mark your path. Don't get lost!
   playerDialogue:
-  - What are you doing?
-  - What am I doing?
+  - What am I supposed to do?
+  - How do I know what my jobs are?
+  - What is my job on this floor?
