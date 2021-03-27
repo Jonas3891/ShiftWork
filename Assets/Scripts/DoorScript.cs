@@ -14,13 +14,11 @@ public class DoorScript : MonoBehaviour, IInteractable
     {
         if (!isOpen)
         {
-            Debug.Log("Door Open");
             _animator.Play("DoorOpen");
             isOpen = true;
         }
         if(isOpen)
         {
-            Debug.Log("Door Closing");
             _animator.Play("DoorClose");
             isOpen = false;
         }
