@@ -9,6 +9,8 @@ TagManager:
   - Hidden_Obj
   - Bottom_floor
   - Final_floor
+  - Paper
+  - Character
   layers:
   - Default
   - TransparentFX
