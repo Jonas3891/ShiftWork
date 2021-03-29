@@ -6,7 +6,6 @@ public class Button : MonoBehaviour, IInteractable
 {
     private bool isTop = false;
     private bool isBottom = false;
-    private bool isBusy = false;
     public GameObject targetPosition;
     [SerializeField] public GameObject Elevator = null;
     public bool canMove = false;
