@@ -11,6 +11,8 @@ TagManager:
   - Final_floor
   - Paper
   - Character
+  - Fist
+  - Destructable
   layers:
   - Default
   - TransparentFX
