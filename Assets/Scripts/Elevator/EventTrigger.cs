@@ -11,12 +11,10 @@ public class EventTrigger : MonoBehaviour
     {
         if (other.tag == "Final_floor")
         {
-            Debug.Log("IsTop is Now: True");
             isTopFloor = true;
         }
         if(other.tag == "Bottom_floor")
         {
-            Debug.Log("IsBottom is Now: True");
             isBottomFloor = true;
         }
     }
@@ -24,12 +22,10 @@ public class EventTrigger : MonoBehaviour
     {
         if (other.tag == "Final_floor")
         {
-            Debug.Log("isTop is now: False");
             isTopFloor = false;
         }
         if (other.tag == "Bottom_floor")
         {
-            Debug.Log("IsBottom is Now: False");
             isBottomFloor = false;
         }
     }
