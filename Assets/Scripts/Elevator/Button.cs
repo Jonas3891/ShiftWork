@@ -24,7 +24,8 @@ public class Button : MonoBehaviour, IInteractable
         isTop = Elevator.GetComponent<EventTrigger>().isTop();
         isBottom = Elevator.GetComponent<EventTrigger>().isBottom();
         hasCoroutine = Elevator.GetComponent<MoveObject>().isButtonLocked();
-        if (this.name == "Button up")
+
+        if (this.tag == "Button_up")
         {
             if (!hasCoroutine && !isTop)
             {
@@ -35,7 +36,7 @@ public class Button : MonoBehaviour, IInteractable
                 hasCoroutine = false;
             }
         }
-        if (this.name == "Button down")
+        if (this.tag == "Button_down")
         {
 
             if (!hasCoroutine && !isBottom)
@@ -48,7 +49,6 @@ public class Button : MonoBehaviour, IInteractable
             }
         }
     }
-
     private void MoveUp()
     {
         StartCoroutine(Elevator.GetComponent<MoveObject>().SmoothLerp(3f, Elevator, targetPosition));

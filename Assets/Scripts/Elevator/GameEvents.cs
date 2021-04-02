@@ -17,7 +17,6 @@ public class GameEvents : MonoBehaviour
     {
         if(onDoorWayTriggerEnter != null)
         {
-            Debug.Log("Triggered OnDoorWarTriggerEnter");
             onDoorWayTriggerEnter();
         }
     }

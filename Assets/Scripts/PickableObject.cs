@@ -29,11 +29,15 @@ public class PickableObject : MonoBehaviour
         HandleObjectThrow();
         HandleObjectPut();
         HandleObjectRotation();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            pickUpItem();
+        }
     }
 
 
     //Picks up the object from ground
-    private void OnMouseDown()
+    private void pickUpItem()
     {
         Debug.Log("Picking up this object");
         if (Vector3.Distance(playerTransform.position, transform.position) < 8.2f && pickedUp == false)      //If player is close enough

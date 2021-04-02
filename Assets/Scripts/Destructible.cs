@@ -10,13 +10,16 @@ public class Destructible : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-
-        if (col.gameObject.tag == "Fist") {
+        if(col.gameObject.tag != "Destructable") {
             if (col.gameObject.tag == "Fist")
             {
-                GameObject destructObj = Instantiate(destroyedVersion, transform.position, transform.rotation);
-                Destroy(gameObject);
-                Destroy(destructObj, interval);
+                Debug.Log(gameObject.tag);
+                if (col.gameObject.tag == "Fist")
+                {
+                    GameObject destructObj = Instantiate(destroyedVersion, transform.position, transform.rotation);
+                    Destroy(gameObject);
+                    Destroy(destructObj, interval);
+                }
             }
         }
     }
