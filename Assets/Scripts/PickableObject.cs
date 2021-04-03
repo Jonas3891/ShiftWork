@@ -29,13 +29,17 @@ public class PickableObject : MonoBehaviour
         HandleObjectThrow();
         HandleObjectPut();
         HandleObjectRotation();
+
+        if (Input.GetKeyDown(KeyCode.E) && rb.gameObject.tag == "pickable")
+        {
+            pickUpItem();
+        }
     }
 
 
     //Picks up the object from ground
-    private void OnMouseDown()
+    private void pickUpItem()
     {
-        Debug.Log("Picking up this object");
         if (Vector3.Distance(playerTransform.position, transform.position) < 8.2f && pickedUp == false)      //If player is close enough
         {
             transform.SetParent(Camera.main.transform);                                       //sets the parent of the object to camera (object will be always in front of it)

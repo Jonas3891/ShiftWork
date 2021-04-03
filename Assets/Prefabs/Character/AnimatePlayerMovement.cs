@@ -6,10 +6,10 @@ public class AnimatePlayerMovement : MonoBehaviour
 {
     public Animator anim;       // Plays the animations for the character
     public GameObject fist;     // References the mesh for onCollisions
-    public GameObject player;  
-    float speed; 
+    public GameObject player;
+    float speed;
     CharacterController characterController;
-    public bool hasPunched = false; 
+    public bool hasPunched = false;
 
     public void Start()
     {
@@ -29,21 +29,20 @@ public class AnimatePlayerMovement : MonoBehaviour
         // Plays the punching animation of the player. 
         if (Input.GetMouseButtonDown(0))
         {
-             // Enable the mesh collider so it can register a hit
-            fist.GetComponent<MeshCollider>().enabled = true;
-            hasPunched = true;
-            anim.SetTrigger("Punch");
-            hasPunched = false;
-            fist.GetComponent<MeshCollider>().enabled = false;
+
+            StartCoroutine(wait());
+
+
         }
     }
 
-    IENumerator Routine()
+    public IEnumerator wait()
     {
-        // play the animation
+        fist.GetComponent<MeshCollider>().enabled = true;
+        anim.SetTrigger("Punch");
+        yield return new WaitForSeconds(1);
+        fist.GetComponent<MeshCollider>().enabled = false;
 
-        while (!animationDone)
-            yield return new WaitForEndOfFrame();
-
-        // 
     }
+}
+    

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public event GameMangerEventHandler GoToMenuSceneEvent;
     public event GameMangerEventHandler GameOverEvent;
     public event GameMangerEventHandler TimerToggleEvent;
+    public event GameMangerEventHandler SecondFloorEvent;
 
     public bool isGameOver;
     public bool isInventoryUIOn;
@@ -66,4 +67,12 @@ public class GameManager : MonoBehaviour
                 GameOverEvent();
             }
         }
+
+    public void CallEventSecondFloor()
+    {
+        if (SecondFloorEvent != null)
+        {
+            SecondFloorEvent();
+        }
+    }
 }
