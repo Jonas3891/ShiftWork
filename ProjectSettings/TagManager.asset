@@ -4,16 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Button_up
-  - Button_down
-  - Hidden_Obj
-  - Bottom_floor
-  - Final_floor
-  - Paper
+  - Key
+  - InteractiveObject
+  - DoorButton
+  - door
   - Character
   - Fist
+  - Paper
+  - Final_floor
   - Destructable
-  - Floor_2
+  - Bottom_floor
+  - Button_up
+  - Button_down
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -23,9 +26,9 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
-  - 
-  - 
+  - PostProcessing
+  - Interact
+  - Interior Doors
   - 
   - 
   - 

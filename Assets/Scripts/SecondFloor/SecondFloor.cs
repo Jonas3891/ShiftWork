@@ -25,7 +25,6 @@ public class SecondFloor : MonoBehaviour
 
     private void OnDisable()
     {
-        Debug.Log("Disabled Floor 2");
         PaperShredder.OnShred -= shredder;
     }
 

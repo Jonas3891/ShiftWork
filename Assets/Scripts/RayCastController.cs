@@ -18,6 +18,7 @@ public class RayCastController : MonoBehaviour
         if (hit)
         {
             GameObject hitObject = hitInfo.transform.gameObject;
+
             if (Input.GetKeyDown(KeyCode.E))
             {
                 if (hitObject.GetComponent<IInteractable>() != null)
