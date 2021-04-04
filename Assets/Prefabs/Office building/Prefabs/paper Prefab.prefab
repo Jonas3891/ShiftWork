@@ -45,9 +45,9 @@ GameObject:
   - component: {fileID: 65300160774426730}
   - component: {fileID: 3082797436767422411}
   - component: {fileID: 2692133237013649857}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: paper
-  m_TagString: Untagged
+  m_TagString: Paper
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
