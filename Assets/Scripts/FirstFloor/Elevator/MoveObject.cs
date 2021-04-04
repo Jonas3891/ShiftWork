@@ -13,14 +13,13 @@ public class MoveObject : MonoBehaviour
 
 
         float elapsedTime = 0;
-
         while (elapsedTime < time)
         {
             isLocked = true;
             elapsedTime += Time.deltaTime;
             transform.position = Vector3.Lerp(startingPos, finalPos, (elapsedTime / time));
             yield return null;
-            isLocked = false; 
+            isLocked = false;
         }
     }
 

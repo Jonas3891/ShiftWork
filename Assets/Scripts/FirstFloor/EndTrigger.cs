@@ -10,7 +10,6 @@ public class EndTrigger : MonoBehaviour
     {
         if (col.gameObject.tag == "Character")
         {
-            Debug.Log("In EndTrigger");
             OnEndTrigger();
         }
     }

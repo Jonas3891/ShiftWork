@@ -30,7 +30,7 @@ public class PickableObject : MonoBehaviour
         HandleObjectPut();
         HandleObjectRotation();
 
-        if (Input.GetKeyDown(KeyCode.E) && rb.gameObject.tag == "pickable")
+        if (Input.GetKeyDown(KeyCode.E) && rb.gameObject.tag == "pickUp")
         {
             pickUpItem();
         }
