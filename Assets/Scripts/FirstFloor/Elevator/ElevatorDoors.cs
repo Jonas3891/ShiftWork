@@ -21,6 +21,7 @@ public class ElevatorDoors : MonoBehaviour
         float LeftToPos = leftDoor.transform.localPosition.x - Displace;
         float RightToPos = rightDoor.transform.localPosition.x + Displace;
         Debug.Log("Open Doors");
+
         while (elapsedTime < Smooth)
         {
             isLocked = true;

@@ -13,6 +13,7 @@ public class ElevatorDoorController : MonoBehaviour, IInteractable
     {
         isBusy = elevator.GetComponent<ElevatorDoors>().isLocked;
     }
+
     public void PushButton()
     {
         isOpen = elevator.GetComponent<ElevatorDoors>().isOpen;
@@ -31,7 +32,7 @@ public class ElevatorDoorController : MonoBehaviour, IInteractable
     public void interact()
     {
         isBusy = elevator.GetComponent<ElevatorDoors>().isLocked;
-        if (!isBusy)
+        if (!isBusy && isPowered)
         {
             PushButton();
         }

@@ -11,18 +11,23 @@ public class SecondFloorPanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        button.GetComponent<Renderer>().material = off;
         SecondFloor.OnComplete += lvlComplete;
     }
 
     void lvlComplete()
     {
         Debug.Log("lvlComplete in PaneControl");
-        button.GetComponent<Button>().canMove = true;
-
-
+        turnOn();
+    }
+    
+    public void turnOn()
+    {
         button.GetComponent<Renderer>().material = on;
-
-
+        button.GetComponentInParent<ElevatorDoorController>().isPowered = true;
+    }
+    public void turnOff()
+    {
+        button.GetComponent<Renderer>().material = off;
+        button.GetComponentInParent<ElevatorDoorController>().isPowered = false;
     }
 }

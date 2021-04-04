@@ -30,13 +30,6 @@ public class Button : MonoBehaviour, IInteractable
         {
             if (!hasCoroutine && !isTop)
             {
-                Debug.Log("Really Moving Up");
-
-                if (Elevator.GetComponent<ElevatorDoors>().isOpen)
-                {
-                    CloseDoors();
-                }
-
                 MoveUp(Floor1);
             }
         }
@@ -61,7 +54,6 @@ public class Button : MonoBehaviour, IInteractable
     {
         hasCoroutine = true;
         StartCoroutine(Elevator.GetComponent<MoveObject>().SmoothLerp(3f, Elevator, targetPos));
-        hasCoroutine = false;
     }
     private void MoveDown(GameObject targetPos)
     {

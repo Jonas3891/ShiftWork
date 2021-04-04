@@ -8,17 +8,19 @@ public class SecondFloor : MonoBehaviour
     public Text scoreDisplay;
     private int Score = 0;
     private int MAXSCORE = 5;
+    public GameObject button;
+    public GameObject elevator;
 
     public delegate void lvlComplete();
     public static event lvlComplete OnComplete;
 
     private void Start()
     {
+        button.GetComponent<ElevatorDoorController>().isPowered = false;
         scoreDisplay.enabled = true;
     }
     private void OnEnable()
     {
-        Debug.Log("Enabled Floor 2");
         PaperShredder.OnShred += shredder;
         EnterFloor.OnEnter += StartFloor;
     }
@@ -30,7 +32,9 @@ public class SecondFloor : MonoBehaviour
 
     void StartFloor()
     {
-        Debug.Log("Starting Second Floor");
+        button.GetComponent<SecondFloorPanel>().turnOff();
+        Debug.Log("Starting Level/closing doors");
+        StartCoroutine(elevator.GetComponent<ElevatorDoors>().CloseElevator());
     }
     void shredder()
     {
@@ -47,6 +51,7 @@ public class SecondFloor : MonoBehaviour
     {
         Debug.Log(Score);
         Debug.Log(MAXSCORE);
+        button.GetComponent<ElevatorDoorController>().isPowered = true;
         OnComplete();
     }
 }

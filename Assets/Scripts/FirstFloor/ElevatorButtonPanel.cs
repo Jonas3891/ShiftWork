@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirstFloorPanel : MonoBehaviour
+public class ElevatorButtonPanel : MonoBehaviour
 {
     public GameObject button;
     public Material on;
