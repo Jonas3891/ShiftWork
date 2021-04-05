@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 33286485923027340}
   - component: {fileID: 23163926740009746}
   - component: {fileID: 64415463131176284}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Toilet handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ GameObject:
   - component: {fileID: 23901474274552900}
   - component: {fileID: 64446970135216068}
   - component: {fileID: 114514136136964088}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Toilet Door
   m_TagString: Door
   m_Icon: {fileID: 0}

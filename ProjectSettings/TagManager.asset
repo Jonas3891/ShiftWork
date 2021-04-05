@@ -17,6 +17,7 @@ TagManager:
   - Button_up
   - Button_down
   - Door
+  - pickUp
   layers:
   - Default
   - TransparentFX
@@ -27,9 +28,9 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - Interact
+  - Interaction
   - Interior Doors
-  - 
+  - NPC
   - 
   - 
   - 

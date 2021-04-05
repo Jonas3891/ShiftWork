@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class MoveObject : MonoBehaviour
 {
-    bool isLocked = false;
+    public bool isLocked = false;
+    public GameObject elevator; 
+
     public IEnumerator SmoothLerp(float time, GameObject startPos, GameObject endPos)
     {
 
@@ -13,15 +15,22 @@ public class MoveObject : MonoBehaviour
 
 
         float elapsedTime = 0;
+        StartCoroutine(elevator.GetComponent<ElevatorDoors>().CloseElevator());
 
         while (elapsedTime < time)
         {
+            
+            
             isLocked = true;
+
             elapsedTime += Time.deltaTime;
             transform.position = Vector3.Lerp(startingPos, finalPos, (elapsedTime / time));
+
             yield return null;
-            isLocked = false; 
+
         }
+        isLocked = false;
+        StartCoroutine(elevator.GetComponent<ElevatorDoors>().OpenElevator());
     }
 
     public bool isButtonLocked()

@@ -8,9 +8,10 @@ public class PaperShredder : MonoBehaviour
 {
     public delegate void shred();
     public static event shred OnShred; 
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Paper")
+        if (other.gameObject.tag == "pickUp")
         {
             Destroy(other.gameObject);
             OnShred();
