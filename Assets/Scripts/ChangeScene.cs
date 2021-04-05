@@ -6,9 +6,10 @@ using UnityEngine;
 public class ChangeScene : MonoBehaviour
 {
     GameObject sceneToLoad;
+    public Scene toLoad;
 
     public void LoadNewScene()
     {
-        SceneManager.LoadScene("CityPartial");
+        SceneManager.LoadScene(toLoad.handle);
     }
 }

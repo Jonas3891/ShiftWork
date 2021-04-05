@@ -23,7 +23,7 @@ public class Button : MonoBehaviour, IInteractable
         if (this.name == "ButtonFloor1")
         {
             if (!hasCoroutine && !isTop)
-            {
+            {                
                 this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor1);
             }
         }
