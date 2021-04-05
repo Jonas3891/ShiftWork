@@ -6,18 +6,12 @@ public class Button : MonoBehaviour, IInteractable
 {
     private bool isTop = false;
     private bool isBottom = false;
-    public GameObject Floor1;
+
     [SerializeField] public GameObject Elevator;
     public bool canMove = true;
     public bool hasCoroutine = false;
 
-    void Start()
-    {
- 
-        isTop = Elevator.GetComponent<EventTrigger>().isTop();
-        isBottom = Elevator.GetComponent<EventTrigger>().isBottom();
-        hasCoroutine = Elevator.GetComponent<MoveObject>().isButtonLocked();
-    }
+    
     public void Switch()
     {
         isTop = Elevator.GetComponent<EventTrigger>().isTop();
@@ -30,51 +24,52 @@ public class Button : MonoBehaviour, IInteractable
         {
             if (!hasCoroutine && !isTop)
             {
-                MoveUp(Floor1);
+                this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor1);
             }
         }
 
-
-
-        if (this.tag == "Button_down")
+        if (this.name == "ButtonFloor2")
         {
-
-            if (!hasCoroutine && !isBottom)
+            if (!hasCoroutine && !isTop)
             {
-                hasCoroutine = true;
-                //MoveDown();
-                isTop = Elevator.GetComponent<EventTrigger>().isTop();
-                isBottom = Elevator.GetComponent<EventTrigger>().isBottom();
-                hasCoroutine = false;
-                
+                this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor2);
             }
         }
-    }
-    private void MoveUp(GameObject targetPos)
-    {
-        hasCoroutine = true;
-        StartCoroutine(Elevator.GetComponent<MoveObject>().SmoothLerp(3f, Elevator, targetPos));
-    }
-    private void MoveDown(GameObject targetPos)
-    {
-        hasCoroutine = true;
-        StartCoroutine(Elevator.GetComponent<MoveObject>().SmoothLerp(3f, Elevator, targetPos));
-        hasCoroutine = false;
+
+        if (this.name == "ButtonFloor3")
+        {
+            if (!hasCoroutine && !isTop)
+            {
+                this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor3);
+            }
+        }
+
+        if (this.name == "ButtonFloor4")
+        {
+            if (!hasCoroutine && !isTop)
+            {
+                this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor4);
+            }
+        }
+
+        if (this.name == "ButtonFloor5")
+        {
+            if (!hasCoroutine && !isTop)
+            {
+                this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor5);
+            }
+        }
+
+        if (this.name == "ButtonFloor6")
+        {
+            if (!hasCoroutine && !isTop)
+            {
+                this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor6);
+            }
+        }
+
     }
 
-    private void CloseDoors()
-    {
-        hasCoroutine = true;
-        StartCoroutine(Elevator.GetComponent<ElevatorDoors>().CloseElevator());
-
-    }
-
-    private void OpenDoors()
-    {
-        hasCoroutine = true;
-        StartCoroutine(Elevator.GetComponent<ElevatorDoors>().OpenElevator());
-        hasCoroutine = false;
-    }
     public void interact()
     {
         Debug.Log("triggered Button");
