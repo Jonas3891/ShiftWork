@@ -20,7 +20,6 @@ public class ElevatorDoors : MonoBehaviour
         float elapsedTime = 0;
         float LeftToPos = leftDoor.transform.localPosition.x - Displace;
         float RightToPos = rightDoor.transform.localPosition.x + Displace;
-        Debug.Log("Open Doors");
 
         while (elapsedTime < Smooth)
         {
@@ -43,7 +42,6 @@ public class ElevatorDoors : MonoBehaviour
         float elapsedTime = 0;
         float LeftToPos = leftDoor.transform.localPosition.x + Displace;
         float RightToPos = rightDoor.transform.localPosition.x - Displace;
-        Debug.Log("Closing Doors");
 
         while (elapsedTime < Smooth)
         {

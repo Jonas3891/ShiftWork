@@ -10,6 +10,7 @@ public class SecondFloor : MonoBehaviour
     private int MAXSCORE = 5;
     public GameObject button;
     public GameObject elevator;
+    public GameObject floorTrigger;
 
     public delegate void lvlComplete();
     public static event lvlComplete OnComplete;
@@ -49,9 +50,8 @@ public class SecondFloor : MonoBehaviour
 
     void winCondition()
     {
-        Debug.Log(Score);
-        Debug.Log(MAXSCORE);
         button.GetComponent<ElevatorDoorController>().isPowered = true;
         OnComplete();
+        Destroy(floorTrigger);
     }
 }

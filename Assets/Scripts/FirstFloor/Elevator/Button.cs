@@ -72,7 +72,6 @@ public class Button : MonoBehaviour, IInteractable
 
     public void interact()
     {
-        Debug.Log("triggered Button");
         Switch();
     }
 }

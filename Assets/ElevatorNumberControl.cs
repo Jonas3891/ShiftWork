@@ -13,7 +13,6 @@ public class ElevatorNumberControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collding with" + other.gameObject.name);
         if (other.gameObject.name == "TargetFirstFloor")
         {
             first.SetActive(true);

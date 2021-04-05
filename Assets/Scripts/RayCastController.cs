@@ -36,7 +36,6 @@ public class RayCastController : MonoBehaviour
                 {
                     if (hitObject.GetComponent<IInteractable>() != null)
                     {
-                        Debug.Log("Interact with" + hitObject.name);
                         hitObject.GetComponent<IInteractable>().interact();
                     }
 
