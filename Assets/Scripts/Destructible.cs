@@ -11,7 +11,6 @@ public class Destructible : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log("Punching Wall");
         if(col.gameObject.tag != "Destructable") {
             if (col.gameObject.tag == "Fist")
             {

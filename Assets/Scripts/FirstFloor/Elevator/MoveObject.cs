@@ -5,10 +5,14 @@ using UnityEngine;
 public class MoveObject : MonoBehaviour
 {
     public bool isLocked = false;
-    public GameObject elevator; 
+    public GameObject elevator;
+    public AudioSource bkMusic;
+    public AudioSource muzak;
 
     public IEnumerator SmoothLerp(float time, GameObject startPos, GameObject endPos)
     {
+        bkMusic.Stop();
+        muzak.Play();
 
         Vector3 startingPos = startPos.transform.position;
         Vector3 finalPos = endPos.transform.position;
@@ -30,6 +34,8 @@ public class MoveObject : MonoBehaviour
 
         }
         isLocked = false;
+        bkMusic.Play();
+        muzak.Stop();
         StartCoroutine(elevator.GetComponent<ElevatorDoors>().OpenElevator());
     }
 
