@@ -13,5 +13,15 @@ MonoBehaviour:
   m_Name: Nancy
   m_EditorClassIdentifier: 
   NPCname: 
-  dialogue: []
-  playerDialogue: []
+  dialogue:
+  - 'Hello I''m Nancy.
+
+
+    Welcome to the First Floor. We have lots to do today!'
+  - Your job on this floor is to find all the loose paper and dispose of them in
+    the paper shredder. Shred 5 pieces of paper to move on to the next floor.
+  - Press the E key to pick up an item. When holding an item you can rotate it with
+    the R key or throw it with the RMB mouse button.
+  playerDialogue:
+  - Hi Nancy. What do you need me to do?
+  - How do I do this job?
