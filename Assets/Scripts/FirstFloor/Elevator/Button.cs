@@ -7,6 +7,13 @@ public class Button : MonoBehaviour, IInteractable
     private bool isTop = false;
     private bool isBottom = false;
 
+    public GameObject Floor1;
+    public GameObject Floor2;
+    public GameObject Floor3;
+    public GameObject Floor4;
+    public GameObject Floor5;
+    public GameObject Floor6;
+
     [SerializeField] public GameObject Elevator;
     public bool canMove = true;
     public bool hasCoroutine = false;
@@ -25,6 +32,13 @@ public class Button : MonoBehaviour, IInteractable
             if (!hasCoroutine && !isTop)
             {                
                 this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor1);
+                Floor1.SetActive(true);
+                Floor2.SetActive(true);
+                Floor3.SetActive(false);
+                Floor4.SetActive(false);
+                Floor5.SetActive(false);
+                Floor6.SetActive(false);
+
             }
         }
 
@@ -33,6 +47,12 @@ public class Button : MonoBehaviour, IInteractable
             if (!hasCoroutine && !isTop)
             {
                 this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor2);
+                Floor1.SetActive(false);
+                Floor2.SetActive(true);
+                Floor3.SetActive(true);
+                Floor4.SetActive(false);
+                Floor5.SetActive(false);
+                Floor6.SetActive(false);
             }
         }
 
@@ -41,6 +61,12 @@ public class Button : MonoBehaviour, IInteractable
             if (!hasCoroutine && !isTop)
             {
                 this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor3);
+                Floor1.SetActive(false);
+                Floor2.SetActive(false);
+                Floor3.SetActive(true);
+                Floor4.SetActive(true);
+                Floor5.SetActive(false);
+                Floor6.SetActive(false);
             }
         }
 
@@ -49,6 +75,12 @@ public class Button : MonoBehaviour, IInteractable
             if (!hasCoroutine && !isTop)
             {
                 this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor4);
+                Floor1.SetActive(false);
+                Floor2.SetActive(false);
+                Floor3.SetActive(false);
+                Floor4.SetActive(true);
+                Floor5.SetActive(true);
+                Floor6.SetActive(false);
             }
         }
 
@@ -57,6 +89,12 @@ public class Button : MonoBehaviour, IInteractable
             if (!hasCoroutine && !isTop)
             {
                 this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor5);
+                Floor1.SetActive(false);
+                Floor2.SetActive(false);
+                Floor3.SetActive(false);
+                Floor4.SetActive(false);
+                Floor5.SetActive(true);
+                Floor6.SetActive(true);
             }
         }
 
@@ -65,6 +103,12 @@ public class Button : MonoBehaviour, IInteractable
             if (!hasCoroutine && !isTop)
             {
                 this.GetComponentInParent<ElevatorPanelControl>().MoveUp(this.GetComponentInParent<ElevatorPanelControl>().Floor6);
+                Floor1.SetActive(false);
+                Floor2.SetActive(false);
+                Floor3.SetActive(false);
+                Floor4.SetActive(false);
+                Floor5.SetActive(true);
+                Floor6.SetActive(true);
             }
         }
 

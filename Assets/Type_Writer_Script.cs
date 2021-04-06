@@ -34,7 +34,7 @@ public class Type_Writer_Script : MonoBehaviour
 
     IEnumerator ShowText3()
     {
-        string text3 = "And left me his farm!";
+        string text3 = "And left me a job at his old firm!";
 
         for (int i = 0; i <= text3.Length; i++)
         {
