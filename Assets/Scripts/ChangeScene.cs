@@ -11,7 +11,7 @@ public class ChangeScene : MonoBehaviour
     private void Update()
     {
      
-        if (Input.GetKeyDown("Escape") || Input.GetKeyDown("e"))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space))
         {
             LoadNewScene();
         }
