@@ -6,6 +6,7 @@ public class MoveObject : MonoBehaviour
 {
     public bool isLocked = false;
     public GameObject elevator;
+    public GameObject player;
     public AudioSource bkMusic;
     public AudioSource muzak;
 
@@ -14,6 +15,7 @@ public class MoveObject : MonoBehaviour
         bkMusic.Stop();
         muzak.Play();
 
+        player.transform.parent = elevator.transform;
         Vector3 startingPos = startPos.transform.position;
         Vector3 finalPos = endPos.transform.position;
 
