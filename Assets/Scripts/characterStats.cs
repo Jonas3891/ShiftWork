@@ -12,7 +12,7 @@ public class characterStats : MonoBehaviour
     public float maxHealth;
 
     public GameObject Objectives;
-    public int objectivesLeft;
+    private int objectivesLeft;
     public Text totalObjectives;
 
 
@@ -45,10 +45,11 @@ public class characterStats : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       //if (objectivesLeft == 5)
-        //{
-         //   Exit.SetActive(true);
-        //}
+       if (objectivesLeft == 0)
+        {
+            objectivesLeft = 3;
+        }
+           
     }
 
 
@@ -97,7 +98,7 @@ public class characterStats : MonoBehaviour
     public void handInObjective()
     {
         objectivesLeft = objectivesLeft - 1;
-        totalObjectives.text = "Objectives Left" + objectivesLeft.ToString();
+        totalObjectives.text = "Objectives Left: " + objectivesLeft.ToString();
     }
 
     private int CheckObjective()
